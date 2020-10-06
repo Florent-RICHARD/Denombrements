@@ -1,9 +1,9 @@
 ﻿/**
  * titre : calculs de dénombrements
  * description : permet 3 types de calculs (permutation, arrangement, combinaison)
- * auteur : Emds
- * date création : 15/06/2020
- * date dernière modification : 17/06/2020
+ * auteur : RICHARD Florent
+ * date création : 06/10/2020
+ * date dernière modification : 06/10/2020
  */
 using System;
 
@@ -12,7 +12,7 @@ namespace Denombrements
     class Program
     {
         /// <summary>
-        /// Calcul du produit de plusieurs entiers successifs, de valeurDepart à valeurArrivee
+        /// Calcul de permutation, d'arrangement et de combinaison
         /// </summary>
         /// <param name="valeurDepart">valeur de départ du calcul</param>
         /// <param name="valeurArrivee">valeur d'arrivée du calcul</param>
@@ -42,14 +42,14 @@ namespace Denombrements
                 Console.WriteLine("Quitter .......................... 0");
                 Console.Write("Choix :                            ");
                 choix = Console.ReadLine();
-                // choix correct excluant le choix de quitter
+                // S'éxecute si le choix est correcte
                 if (choix == "1" || choix == "2" || choix == "3")
                 {
                     try
                     {
                         Console.Write("nombre total d'éléments à gérer = ");
                         int nbTotal = int.Parse(Console.ReadLine());
-                        // choix : permutation
+                        // Calcul pour la permutation
                         if (choix == "1")
                         {
                             long permutation = ProduitEntiers(1, nbTotal);
@@ -61,12 +61,12 @@ namespace Denombrements
                             int nbSousEnsenble = int.Parse(Console.ReadLine());
                             // calcul de l'arrangement qui sert aussi au calcul de la combinaison
                             long arrangement = ProduitEntiers(nbTotal - nbSousEnsenble + 1, nbTotal);
-                            // choix : arrangement
+                            // Calcul pour l'arrangement
                             if (choix == "2")
                             {
                                 Console.WriteLine("A(" + nbTotal + "/" + nbSousEnsenble + ") = " + arrangement);
                             }
-                            // choix : combinaison
+                            // Calcul pour la combinaison
                             else
                             {
                                 long combinaison = arrangement / ProduitEntiers(1, nbSousEnsenble);
