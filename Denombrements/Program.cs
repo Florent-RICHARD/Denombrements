@@ -1,9 +1,9 @@
 ﻿/**
  * titre : calculs de dénombrements
  * description : permet 3 types de calculs (permutation, arrangement, combinaison)
- * auteur : Emds
- * date création : 15/06/2020
- * date dernière modification : 17/06/2020
+ * auteur : RICHARD Florent
+ * date création : 06/10/2020
+ * date dernière modification : 06/10/2020
  */
 using System;
 
